@@ -24,10 +24,10 @@ const Navbar = () => {
 <Link to="/cryptocurrencies" style={{color:"green", fontSize: "22px"}}>Cryptocurrencies</Link>
 </Menu.Item>
 <Menu.Item icon={<MoneyCollectOutlined style={{color:"cyan", fontSize: "22px"}} />} >
-<Link to="/exchanges" style={{color:"green", fontSize: "22px"}}>Exchanges</Link>
+<Link to="/portfolio" style={{color:"green", fontSize: "22px"}}>Portfolio</Link>
 </Menu.Item>
 <Menu.Item icon={<BulbOutlined style={{color:"cyan", fontSize: "22px"}} />} >
-<Link to="/news" style={{color:"green", fontSize: "22px"}}>News</Link>
+<Link to="/watchlist" style={{color:"green", fontSize: "22px"}}>Watchlist</Link>
 </Menu.Item>
 </Menu>  
 
