@@ -1,8 +1,10 @@
-# Getting Started with Create React App
+# Project Title: Cryptocurrency Market
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Objective
 
-## Available Scripts
+An application thats gives lastest statistics about user assets and also allow user to add assets and get information about their assets.
+
+### Customer 
 
 In the project directory, you can run:
 
