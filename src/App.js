@@ -53,7 +53,7 @@ const App = () => {
           </Typography.Title>
           <Space>
             <Link to="/">Home</Link>
-            <Link to="/cryptocurrency">Cryptocurrencies</Link>
+            <Link to="/cryptocurrencies">Cryptocurrencies</Link>
             <Link to="/portfolio">Portfolio</Link>
           </Space>
         </div>
