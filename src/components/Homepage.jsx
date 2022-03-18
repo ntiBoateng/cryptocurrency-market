@@ -1,7 +1,7 @@
 import React from 'react'
 import millify from "millify"
 import {Typography, Row, Col, Statistic} from "antd"
-import {PlusCircleOutlined} from '@ant-design/icons'
+
 import {Link} from "react-router-dom"
 
 import {Cryptocurrencies} from "../components"
@@ -30,7 +30,7 @@ if(isFetching) return <Loader />
     <>
     <Title level={2} className="heading">Cryptocurrency Market Global Stats</Title>
 
-   <div className='plus'>{<PlusCircleOutlined/>}<Link to="Portfolio" style={{color: "black"}}>Create Portfolio</Link></div> 
+  
     
 
     <Row>
