@@ -17,6 +17,15 @@ a:hover {
   color: var(--pink) !important;
 }
 
+.adnew {
+  display: flex;
+  gap: 15px;
+  justify-content: right;
+  font-weight: bold;
+}
+
+
+
 .app {
   display: flex;
   overflow: hidden;
