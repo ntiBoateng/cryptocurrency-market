@@ -8,6 +8,8 @@ import {Cryptocurrencies} from "../components"
 //api call 
 import {useGetCryptosQuery} from "../services/cryptoApi"
 
+import Loader from "./Loader"
+
 const {Title} = Typography;
 
 const Homepage = () => {
@@ -18,7 +20,7 @@ const globalStats = data?.data?.stats
 
 //console.log(data)
 
-if(isFetching) return "Loading..."
+if(isFetching) return <Loader />
 
   return (
     <>

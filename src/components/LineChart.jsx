@@ -8,7 +8,7 @@ const { Title } = Typography;
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinPrice = [];
   const coinTimestamp = [];
-    
+
   for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
     coinPrice.push(coinHistory?.data?.history[i].price);
   }
@@ -40,7 +40,9 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
       ],
     },
   };
+  
 console.log(coinName)
+
   return (
     <>
       <Row className="chart-header">
