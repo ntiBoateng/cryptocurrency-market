@@ -24,8 +24,25 @@ a:hover {
   font-weight: bold;
 }
 
+.etitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 4px;
+}
 
-
+.portempty {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.esubtitle {
+  font-size: 14px;
+  color: #58667e;
+  padding-bottom: 20px;
+}
 .app {
   display: flex;
   overflow: hidden;
