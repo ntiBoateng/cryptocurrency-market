@@ -5,6 +5,8 @@ import {Card, Row, Col, Input, Typography} from "antd"
 
 import {useGetCryptosQuery} from "../services/cryptoApi"
 
+import Loader from "./Loader"
+
 const {Title} = Typography;
 
 const Cryptocurrencies = ({ simplified }) => {
@@ -23,7 +25,7 @@ const filteredData = cryptosList?.data?.coins.filter((coin)=> coin.name.toLowerC
 setCryptos(filteredData)
 },[cryptosList, searchTerm])
 
-if(isFetching) return "Loading..."
+if(isFetching) return <Loader />
   return (
     <>
     {! simplified && (
