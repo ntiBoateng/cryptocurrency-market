@@ -1,56 +1,65 @@
-import React from 'react'
-import { Switch, Route, Link } from 'react-router-dom'
-import { Layout, Typography, Space } from 'antd'
+import React from "react";
+import { Switch, Route, Link } from "react-router-dom";
+import { Layout, Typography, Space } from "antd";
 
-import "./App.css"
+import "./App.css";
 
-import {Navbar, Portfolio, Homepage, CryptoDetails, Cryptocurrencies, Watchlist} from "./components"
+import {
+  Navbar,
+  Portfolio,
+  Homepage,
+  CryptoDetails,
+  Cryptocurrencies,
+  Watchlist,
+} from "./components";
 
 const App = () => {
   return (
     <div className="app">
-        <div className='navbar'>
-         <Navbar />
-        </div>
+      <div className="navbar">
+        <Navbar />
+      </div>
 
-        <div className='main'>
+      <div className="main">
         <Layout>
-            <div className='routes'>
+          <div className="routes">
             <Switch>
-                <Route exact path="/">
+              <Route exact path="/">
                 <Homepage />
-                </Route>
-                <Route exact path="/portflio">
+              </Route>
+              <Route exact path="/portfolio">
                 <Portfolio />
-                </Route>
-                <Route exact path="/cryptocurrencies">
+              </Route>
+              <Route exact path="/cryptocurrencies">
                 <Cryptocurrencies />
-                </Route>
-                <Route exact path="/crypto/:coinId">
+              </Route>
+              <Route exact path="/crypto/:coinId">
                 <CryptoDetails />
-                </Route>
-                <Route exact path="/watchlist">
+              </Route>
+              <Route exact path="/watchlist">
                 <Watchlist />
-                </Route>
-                </Switch>
-            </div>
+              </Route>
+            </Switch>
+          </div>
         </Layout>
-        
 
-        <div className='footer'>
-        <Typography.Title level={5} style={{textAlign:"center", color: "white"}}>
+        <div className="footer">
+          <Typography.Title
+            level={5}
+            style={{ textAlign: "center", color: "white" }}
+          >
             CryptoMart @Amalitech.org <br />
             All rights reserved
-        </Typography.Title>
-        <Space>
-          <Link to="/">Home</Link>
-          <Link to="/cryptocurrency">Cryptocurrencies</Link>
-          <Link to="/portfolio">Portfolio</Link>
-        </Space>
+          </Typography.Title>
+          <Space>
+            <Link to="/">Home</Link>
+            <Link to="/cryptocurrency">Cryptocurrencies</Link>
+            <Link to="/portfolio">Portfolio</Link>
+          </Space>
         </div>
-        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
