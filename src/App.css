@@ -22,6 +22,8 @@ a:hover {
   gap: 15px;
   justify-content: right;
   font-weight: bold;
+
+  
 }
 
 .etitle {
@@ -104,6 +106,7 @@ a:hover {
 }
 .plus:hover {
   background-color: #fdf9f9;
+  color: blue;
 }
 
 .loader {
