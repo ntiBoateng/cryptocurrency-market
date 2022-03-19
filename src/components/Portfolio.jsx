@@ -16,6 +16,20 @@ const Portfolio = () => {
   const handleCancel = () => {
     setIsModalVisible(false);
   };
+
+  const [isModal_Visible, setIsModal_Visible] = useState(false);
+
+  const show_Modal = () => {
+    setIsModal_Visible(true);
+  };
+
+  const handle_Ok = () => {
+    setIsModal_Visible(false);
+  };
+
+  const handle_Cancel = () => {
+    setIsModal_Visible(false);
+  };
   return (
     <>
       <>
@@ -25,10 +39,50 @@ const Portfolio = () => {
               borderRadius: "10px",
               background: "rgba(150, 150, 150, 0.2)",
               color: "black",
+              fontWeight: "bold",
             }}
+            onClick={show_Modal}
           >
-            ... More
+            Edit portfolio
           </Button>
+          <Modal
+            title="Edit portfolio"
+            visible={isModal_Visible}
+            onOk={handle_Ok}
+            onCancel={handle_Cancel}
+          >
+            <p>Portfolio name</p>
+            <Input
+              style={{
+                borderRadius: "8px",
+              }}
+              placeholder="Enter your portfolio name..."
+              maxLength="32"
+              type="text"
+            />
+            <p>6 /32 characters</p>
+            <div>
+              <Button
+                style={{
+                  background: "rgb(56, 97, 251)",
+                  color: "rgb(255, 255, 255)",
+                  cursor: "pointer",
+                  fontWeight: "600",
+                  borderRadius: "8px",
+                  width: "auto",
+                  height: "40px",
+                  padding: "0px 24px",
+                  lineHeight: "24px",
+                  alignItems: "center",
+                  border: "0px",
+                  display: "inline-flex",
+                  justifyContent: "center",
+                }}
+              >
+                Edit portfolio
+              </Button>
+            </div>
+          </Modal>
           <Button
             style={{
               borderRadius: "10px",
@@ -85,7 +139,6 @@ const Portfolio = () => {
                   display: "inline-flex",
                   justifyContent: "center",
                 }}
-                className="Port"
               >
                 Create portfolio
               </Button>
