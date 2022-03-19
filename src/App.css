@@ -22,8 +22,6 @@ a:hover {
   gap: 15px;
   justify-content: right;
   font-weight: bold;
-
-  
 }
 
 .etitle {
@@ -93,7 +91,7 @@ a:hover {
   background-color: var(--bgSecondary) !important;
   border: none !important;
 }
-.plus {
+.plus.createPortBtn {
   width: 170px;
   height: 30px;
   display: flex;
@@ -105,9 +103,10 @@ a:hover {
   border-radius: 10px;
 }
 .plus:hover {
-  background-color: #fdf9f9;
+  background-color: #b1b1b1;
   color: blue;
 }
+
 
 .loader {
   height: 81vh;
