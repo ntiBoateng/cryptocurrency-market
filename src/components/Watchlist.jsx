@@ -90,27 +90,7 @@ const Watchlist = () => {
                 onChange={onChange}
               ></TextArea>
               <p> symbols</p>
-              <div>
-                <Button
-                  style={{
-                    background: "rgb(56, 97, 251)",
-                    color: "rgb(255, 255, 255)",
-                    cursor: "pointer",
-                    fontWeight: "600",
-                    borderRadius: "8px",
-                    width: "auto",
-                    height: "40px",
-                    padding: "0px 24px",
-                    lineHeight: "24px",
-                    alignItems: "center",
-                    border: "0px",
-                    display: "inline-flex",
-                    justifyContent: "center",
-                  }}
-                >
-                  Create Watchlist
-                </Button>
-              </div>
+             
             </Modal>
             <div>
               <Button
@@ -161,27 +141,7 @@ const Watchlist = () => {
                   onChange={onChange}
                 ></TextArea>
                 <p> symbols</p>
-                <div>
-                  <Button
-                    style={{
-                      background: "rgb(56, 97, 251)",
-                      color: "rgb(255, 255, 255)",
-                      cursor: "pointer",
-                      fontWeight: "600",
-                      borderRadius: "8px",
-                      width: "auto",
-                      height: "40px",
-                      padding: "0px 24px",
-                      lineHeight: "24px",
-                      alignItems: "center",
-                      border: "0px",
-                      display: "inline-flex",
-                      justifyContent: "center",
-                    }}
-                  >
-                    Save Changes
-                  </Button>
-                </div>
+               
               </Modal>
             </div>
             <Button
