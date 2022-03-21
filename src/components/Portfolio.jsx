@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import { PlusCircleOutlined } from "@ant-design/icons";
-import { Modal, Button, Input } from "antd";
+import { Modal, Button, Input, Select } from "antd";
+const {Option} =Select;
+
+function onChange(value) {
+  console.log(`selected ${value}`);
+}
+
+function onSearch(val) {
+  console.log('search:', val);
+}
 
 const Portfolio = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -33,6 +42,20 @@ const Portfolio = () => {
 
   const handle_Cancel = () => {
     setIsModal_Visible(false);
+  };
+
+  const [IsmodalVisible, SetisModalVisible] = useState(false);
+
+  const Showmodal = () => {
+    SetisModalVisible(true);
+  };
+
+  const Handleok = () => {
+    SetisModalVisible(false);
+  };
+
+  const Handlecancel = () => {
+    SetisModalVisible(false);
   };
   return (
     <>
@@ -67,7 +90,6 @@ const Portfolio = () => {
               type="text"
             />
             <p>Characters</p>
-
           </Modal>
           <Button
             style={{
@@ -75,9 +97,32 @@ const Portfolio = () => {
               background: "rgb(56, 97, 251)",
               color: "rgb(255, 255, 255)",
             }}
+            onClick={Showmodal}
           >
             {<PlusCircleOutlined />}Add New
           </Button>
+          <Modal
+            title="Select Coin"
+            visible={IsmodalVisible}
+            onOk={Handleok}
+            onCancel={Handlecancel}
+          >
+           <Select 
+           showSearch
+           placeholder="Select a coin"
+           optionFilterProp="children"
+           onChange={onChange}
+           onSearch={onSearch}
+           filterOption={(input, option) =>
+             option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+           }
+           >   
+           {/* Code To Watch To Connect The Search Coin To We Can Delete After Done With The Connection */}
+              <Option value="jack">Jack</Option>
+              <Option value="lucy">Lucy</Option>
+              <Option value="tom">Tom</Option>
+           </Select>
+          </Modal>
         </div>
 
         <div>
