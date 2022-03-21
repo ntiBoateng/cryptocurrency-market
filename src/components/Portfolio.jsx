@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { PlusCircleOutlined } from "@ant-design/icons";
 import { Modal, Button, Input, Select } from "antd";
+
 const {Option} =Select;
 
-function onChange(value) {
+function Onchange(value) {
   console.log(`selected ${value}`);
 }
 
@@ -111,7 +112,7 @@ const Portfolio = () => {
            showSearch
            placeholder="Select a coin"
            optionFilterProp="children"
-           onChange={onChange}
+           onChange={Onchange}
            onSearch={onSearch}
            filterOption={(input, option) =>
              option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
