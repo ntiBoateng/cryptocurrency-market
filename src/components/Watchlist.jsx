@@ -39,7 +39,7 @@ const Watchlist = () => {
     <>
       <>
         <div>
-          <div className="main_container">My First Watchlist</div>
+         
           <div className="new_watchlist">
             <Button
               style={{
