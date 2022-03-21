@@ -1,6 +1,16 @@
-import { Button, Modal, Input } from "antd";
+import { Button, Modal, Input, Select } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import React, { useState } from "react";
+
+const {Option} =Select;
+
+function Onchange(value) {
+  console.log(`selected ${value}`);
+}
+
+function onSearch(val) {
+  console.log("search:", val);
+}
 
 const { TextArea } = Input;
 const Watchlist = () => {
@@ -35,11 +45,24 @@ const Watchlist = () => {
   const handle_Cancel = () => {
     setIsModal_Visible(false);
   };
+
+  const [IsmodalVisible, SetisModalVisible] = useState(false);
+
+  const Showmodal = () => {
+    SetisModalVisible(true);
+  };
+
+  const Handleok = () => {
+    SetisModalVisible(false);
+  };
+
+  const Handlecancel = () => {
+    SetisModalVisible(false);
+  };
   return (
     <>
       <>
         <div>
-         
           <div className="new_watchlist">
             <Button
               style={{
@@ -90,7 +113,6 @@ const Watchlist = () => {
                 onChange={onChange}
               ></TextArea>
               <p> symbols</p>
-             
             </Modal>
             <div>
               <Button
@@ -141,7 +163,6 @@ const Watchlist = () => {
                   onChange={onChange}
                 ></TextArea>
                 <p> symbols</p>
-               
               </Modal>
             </div>
             <Button
@@ -150,9 +171,33 @@ const Watchlist = () => {
                 background: "rgb(56, 97, 251)",
                 color: "rgb(255, 255, 255)",
               }}
+              onClick={Showmodal}
             >
               Add Coins
             </Button>
+            <Modal
+              title="Select Coin"
+              visible={IsmodalVisible}
+              onOk={Handleok}
+              onCancel={Handlecancel}
+            >
+              <Select
+                showSearch
+                placeholder="Select a coin"
+                optionFilterProp="children"
+                onChange={Onchange}
+                onSearch={onSearch}
+                filterOption={(input, option) =>
+                  option.children.toLowerCase().indexOf(input.toLowerCase()) >=
+                  0
+                }
+              >
+                {/* Code To Watch To Connect The Search Coin To We Can Delete After Done With The Connection */}
+                <Option value="jack">Jack</Option>
+                <Option value="lucy">Lucy</Option>
+                <Option value="tom">Tom</Option>
+              </Select>
+            </Modal>
           </div>
           <div className="portempty">
             <div className="etitle">Your watchlist is empty</div>
