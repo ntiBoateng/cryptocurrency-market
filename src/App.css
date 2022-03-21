@@ -23,6 +23,11 @@ a:hover {
   justify-content: right;
   font-weight: bold;
 }
+.new_watchlist {
+  display: flex;
+  gap: 15px;
+  justify-content: right;
+}
 
 .etitle {
   font-size: 16px;
@@ -107,6 +112,15 @@ a:hover {
   color: blue;
 }
 
+.main_container {
+  width: 180px;
+  background: rgba(150, 150, 150, 0.2);
+  color: black;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
 .loader {
   height: 81vh;

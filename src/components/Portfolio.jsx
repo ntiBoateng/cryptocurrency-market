@@ -17,6 +17,10 @@ const Portfolio = () => {
     setIsModalVisible(false);
   };
 
+  const onChange = (e) => {
+    console.log("Change:", e.target.value);
+  };
+
   const [isModal_Visible, setIsModal_Visible] = useState(false);
 
   const show_Modal = () => {
@@ -53,14 +57,17 @@ const Portfolio = () => {
           >
             <p>Portfolio name</p>
             <Input
+              showCount
+              maxLength={32}
+              onChange={onChange}
               style={{
                 borderRadius: "8px",
               }}
               placeholder="Enter your portfolio name..."
-              maxLength="32"
               type="text"
             />
-            <p>6 /32 characters</p>
+            <p>Characters</p>
+
             <div>
               <Button
                 style={{
@@ -118,10 +125,13 @@ const Portfolio = () => {
                 borderRadius: "8px",
               }}
               placeholder="Enter your portfolio name..."
-              maxLength="32"
               type="text"
+              showCount
+              maxLength={32}
+              onChange={onChange}
             />
-            <p>0 /32 characters</p>
+            <p>Characters</p>
+
             <div>
               <Button
                 style={{
