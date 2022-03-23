@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import millify from "millify";
 import { Link } from "react-router-dom";
-import { Card, Row, Col, Input, Typography } from "antd";
+import { Card, Row, Col, Input, Typography, Button } from "antd";
 
 import { useGetCryptosQuery } from "../services/cryptoApi";
 
 import Loader from "./Loader";
-import { StarOutlined } from "@ant-design/icons";
+import { StarOutlined, FilterOutlined } from "@ant-design/icons";
 
 const { Title } = Typography;
 
@@ -43,6 +43,12 @@ const Cryptocurrencies = ({ simplified }) => {
           />
         </div>
       )}
+      <div className="filters">
+        <Button style={{ borderRadius: "8px" }}>
+          <FilterOutlined />
+          Filters
+        </Button>
+      </div>
 
       <Row gutter={[32, 32]} className="crypto-card-container">
         {cryptos?.map((currency) => (
@@ -53,17 +59,16 @@ const Cryptocurrencies = ({ simplified }) => {
             className="crypto-card"
             key={currency.uuid}
           >
-             <p className="addto_mainwatchlist">
-                  <StarOutlined />
-                  Add to Main Watchlist
-                </p>
+            <p className="addto_mainwatchlist">
+              <StarOutlined />
+              Add to Main Watchlist
+            </p>
             <Link to={`/crypto/${currency.uuid} `}>
               <Card
                 title={`${currency.rank}. ${currency.name}`}
                 extra={<img src={currency.iconUrl} className="crypto-image" />}
                 hoverable
               >
-               
                 <p>Price: {millify(currency.price)}</p>
                 <p>Market Cap: {millify(currency.marketCap)}</p>
                 <p>Daily Change: {millify(currency.change)}%</p>

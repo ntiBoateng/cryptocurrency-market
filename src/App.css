@@ -39,6 +39,10 @@ a:hover {
   cursor: pointer;
   color: #a6b1c2;
 }
+.filters {
+  display: flex;
+  justify-content: right;
+}
 
 .etitle {
   font-size: 16px;
