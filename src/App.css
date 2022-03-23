@@ -22,7 +22,15 @@ a:hover {
   gap: 15px;
   justify-content: right;
   font-weight: bold;
+ 
 }
+
+.select_currency {
+  display: flex;
+  justify-content: right;
+}
+
+
 .new_watchlist {
   display: flex;
   gap: 15px;
