@@ -6,7 +6,7 @@ import { Card, Row, Col, Input, Typography, Button } from "antd";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 
 import Loader from "./Loader";
-import { StarOutlined, FilterOutlined } from "@ant-design/icons";
+import { StarOutlined, FilterOutlined, DownOutlined } from "@ant-design/icons";
 
 const { Title } = Typography;
 
@@ -46,7 +46,7 @@ const Cryptocurrencies = ({ simplified }) => {
       <div className="filters">
         <Button style={{ borderRadius: "8px" }}>
           <FilterOutlined />
-          Filters
+          Filters <DownOutlined />
         </Button>
       </div>
 
