@@ -22,7 +22,6 @@ a:hover {
   gap: 15px;
   justify-content: right;
   font-weight: bold;
- 
 }
 
 .select_currency {
@@ -30,11 +29,15 @@ a:hover {
   justify-content: right;
 }
 
-
 .new_watchlist {
   display: flex;
   gap: 15px;
   justify-content: right;
+}
+
+.addto_mainwatchlist {
+  cursor: pointer;
+  color: #a6b1c2;
 }
 
 .etitle {
